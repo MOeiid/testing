@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import CarNumber from "./Components/CarNumber";
+import Gas from "./Components/Gas";
+import AddAcc from "./Components/AddAcc";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={Styles.container}>
+      <View>
+        <CarNumber />
+      </View>
+      <View>
+        <Gas />
+      </View>
+      <View>
+        <AddAcc />
+      </View>
     </View>
   );
-}
-
-const styles = StyleSheet.create({
+};
+const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
+export default App;
